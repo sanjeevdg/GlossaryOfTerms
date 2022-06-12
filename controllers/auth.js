@@ -24,7 +24,7 @@ res.status(200).json({"myterms":results})
 
 const deleteGlossaryTerm = async (req,res,next) => {
 
-var query = "delete from `glossaryterms` where id="+req.body.termid;
+var query = "delete from glossaryterms where id="+req.body.termid;
 console.log('uery is'+query);
 const [results, metadata] = await sequelize.query(query);
 
@@ -41,7 +41,7 @@ const getTermById = async (req,res,next) => {
 
 //let myforms = await SpunkyForm.findAll();
 
-var query = "select `id`,`term`,`termdesc` from `glossaryterms` where id="+req.body.termid;
+var query = "select id,term,termdesc from glossaryterms where id="+req.body.termid;
 console.log('uery is'+query);
 const [results, metadata] = await sequelize.query(query);
 
