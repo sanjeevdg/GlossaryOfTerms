@@ -1,17 +1,29 @@
 const {Sequelize} = require('sequelize');
 
 
-/** REMOTE DEV ENV SETTINGSS
-const sequelize = new Sequelize('da5oiqsej8qim4', 'iljcgrdmrrgiut', '291ed7ea6b334780be8df19d1e9ca9d9fcdf9297fcae043797c21158a65db3b3', {
+
+const sequelize = new Sequelize('d2mf76t33039l4', 'lchvywrsfggpww', 'bd5eaf71e64a395837e00e7352b3057715b74d9133f0514ba79bbcec509acc26', {
     dialect: 'postgres',
     dialectOptions: {
     ssl: {
         rejectUnauthorized: false
     }
 },
-    host: 'ec2-54-157-16-196.compute-1.amazonaws.com'
+    host: 'ec2-34-198-186-145.compute-1.amazonaws.com'
 });
-**/
+
+/** REMOTE DEV ENV SETTINGSS
+Host
+ec2-34-198-186-145.compute-1.amazonaws.com
+Database
+d2mf76t33039l4
+User
+lchvywrsfggpww
+Port
+5432
+Password
+bd5eaf71e64a395837e00e7352b3057715b74d9133f0514ba79bbcec509acc26
+
 
 const sequelize = new Sequelize('SpunkyFormsDb', 'root', 'sanjeev', {
     dialect: 'mysql',
@@ -28,6 +40,6 @@ const sequelize = new Sequelize('SpunkyFormsDb', 'root', 'sanjeev', {
     idle: 10000
   }   
 });
-
+**/
 //export default sequelize;
 module.exports = sequelize;
