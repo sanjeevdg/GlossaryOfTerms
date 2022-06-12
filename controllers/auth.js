@@ -9,7 +9,7 @@ const tokens = [];
 
 const getTermsList = async (req,res,next) => {
 
-var query = "select `id`,`term`,`termdesc` from `glossaryterms`";
+var query = "select id,term,termdesc from glossaryterms";
 console.log('uery is'+query);
 const [results, metadata] = await sequelize.query(query);
 
